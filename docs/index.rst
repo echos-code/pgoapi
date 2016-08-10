@@ -358,10 +358,10 @@ Enter the following in Linux guest terminal:
 Accesss PokemonGo-Map in your host (Windows) Browser using the IP
 address of your Linux guest: 192.168.0.X:5000
 
-Note: You need to replace all occurrences of eth0 with the name of
-your network adapter for all commands used in VMWare guest (Linux).
-You can find out your network adapter name and IP address using the
-following command in Linux terminal:
+.. note:: You need to replace all occurrences of eth0 with the name
+   of your network adapter for all commands used in VMWare guest
+   (Linux). You can find out your network adapter name and IP address
+   using the following command in Linux terminal:
 
 .. code-block:: console
 
