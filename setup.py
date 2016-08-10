@@ -23,7 +23,6 @@ setup(
     description='Pokemon Go API lib',
     author='tjado',
     url='https://github.com/tejado/pgoapi',
-    download_url="https://github.com/tejado/pgoapi/releases",
     packages=find_packages(),
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
