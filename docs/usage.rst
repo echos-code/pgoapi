@@ -74,7 +74,7 @@ reference, all calls are described with the possible input arguments.
 .. code-block:: python
 
    ...
-   api.release_pokemon(pokemon_id = <your pokemonid>)
+   api.release_pokemon(pokemon_id=<your pokemonid>)
 
 If there are more complex types, like repeated fields and subtypes
 (which have further arguments) they can be specified by lists and
