@@ -36,6 +36,7 @@ well as native phone applications.
 
    installation
    usage
+   api
    types
 
 Pokemon GO MAP
