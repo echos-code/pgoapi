@@ -1,14 +1,7 @@
 #!/usr/bin/env python
-import os
+from setuptools import find_packages, setup
 
-from pip.req import parse_requirements
-from setuptools import setup, find_packages
-
-setup_dir = os.path.dirname(os.path.realpath(__file__))
-path_req = os.path.join(setup_dir, 'requirements.txt')
-install_reqs = parse_requirements(path_req, session=False)
-
-reqs = [str(ir.req) for ir in install_reqs]
+EXCLUDE_FROM_PACKAGES = ['tests']
 
 setup(
     name='pgoapi',
@@ -17,6 +10,14 @@ setup(
     version='1.1.6',
     url='https://github.com/tejado/pgoapi',
     download_url='https://github.com/tejado/pgoapi/releases',
-    packages=find_packages(),
-    install_requires=reqs,
+    packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
+    install_requires=[
+        'geopy',
+        'gpsoauth',
+        'protobuf',
+        'requests[socks]',
+        's2sphere',
+        'six',
+        'xxhash',
+    ],
 )
