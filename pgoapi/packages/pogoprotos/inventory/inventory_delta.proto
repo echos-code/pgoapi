@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.inventory;
+
+import "pogoprotos/inventory/inventory_item.proto";
+
+message InventoryDelta {
+  int64 original_timestamp_ms = 1;
+  int64 new_timestamp_ms = 2;
+  repeated pogoprotos.inventory.InventoryItem inventory_items = 3;
+}
+

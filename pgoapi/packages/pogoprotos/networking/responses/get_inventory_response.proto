@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pogoprotos.networking.responses;
+
+import "pogoprotos/inventory/inventory_delta.proto";
+
+message GetInventoryResponse {
+  bool success = 1;
+  pogoprotos.inventory.InventoryDelta inventory_delta = 2;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+import "pogoprotos/enums/tutorial_state.proto";
+
+message MarkTutorialCompleteMessage {
+  repeated pogoprotos.enums.TutorialState tutorials_completed = 1;
+  bool send_marketing_emails = 2;
+  bool send_push_notifications = 3;
+}
+

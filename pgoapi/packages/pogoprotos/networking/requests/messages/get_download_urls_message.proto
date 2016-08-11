@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+message GetDownloadUrlsMessage {
+  repeated string asset_id = 1;
+}
+

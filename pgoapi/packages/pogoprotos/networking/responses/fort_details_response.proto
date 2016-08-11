@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package pogoprotos.networking.responses;
+
+import "pogoprotos/data/pokemon_data.proto";
+import "pogoprotos/enums/team_color.proto";
+import "pogoprotos/map/fort/fort_type.proto";
+import "pogoprotos/map/fort/fort_modifier.proto";
+
+message FortDetailsResponse {
+  string fort_id = 1;
+  pogoprotos.enums.TeamColor team_color = 2;
+  pogoprotos.data.PokemonData pokemon_data = 3;
+  string name = 4;
+  repeated string image_urls = 5;
+  int32 fp = 6;
+  int32 stamina = 7;
+  int32 max_stamina = 8;
+  pogoprotos.map.fort.FortType type = 9;
+  double latitude = 10;
+  double longitude = 11;
+  string description = 12;
+  repeated pogoprotos.map.fort.FortModifier modifiers = 13;
+}
+

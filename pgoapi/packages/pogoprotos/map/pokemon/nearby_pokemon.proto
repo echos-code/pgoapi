@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package pogoprotos.map.pokemon;
+
+import "pogoprotos/enums/pokemon_id.proto";
+
+message NearbyPokemon {
+  pogoprotos.enums.PokemonId pokemon_id = 1;
+  float distance_in_meters = 2;
+  fixed64 encounter_id = 3;
+  string fort_id = 4;
+  string fort_image_url = 5;
+}
+

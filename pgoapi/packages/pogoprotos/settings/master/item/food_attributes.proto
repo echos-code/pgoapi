@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.settings.master.item;
+
+import "pogoprotos/enums/item_effect.proto";
+
+message FoodAttributes {
+  repeated pogoprotos.enums.ItemEffect item_effect = 1;
+  repeated float item_effect_percent = 2;
+  float growth_percent = 3;
+}
+

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+import "pogoprotos/inventory/item/item_id.proto";
+
+message UseItemGymMessage {
+  pogoprotos.inventory.item.ItemId item_id = 1;
+  string gym_id = 2;
+  double player_latitude = 3;
+  double player_longitude = 4;
+}
+

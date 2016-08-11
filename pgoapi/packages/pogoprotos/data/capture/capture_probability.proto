@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.data.capture;
+
+import "pogoprotos/inventory/item/item_id.proto";
+
+message CaptureProbability {
+  repeated pogoprotos.inventory.item.ItemId pokeball_type = 1 [packed=true];
+  repeated float capture_probability = 2 [packed=true];
+  double reticle_difficulty_scale = 12;
+}
+

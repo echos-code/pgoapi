@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package pogoprotos.map;
+
+import "pogoprotos/map/spawn_point.proto";
+import "pogoprotos/map/fort/fort_data.proto";
+import "pogoprotos/map/fort/fort_summary.proto";
+import "pogoprotos/map/pokemon/nearby_pokemon.proto";
+import "pogoprotos/map/pokemon/wild_pokemon.proto";
+import "pogoprotos/map/pokemon/map_pokemon.proto";
+
+message MapCell {
+  // S2 geographic area that the cell covers (http://s2map.com/) (https://code.google.com/archive/p/s2-geometry-library/)
+  uint64 s2_cell_id = 1;
+  int64 current_timestamp_ms = 2;
+  repeated pogoprotos.map.fort.FortData forts = 3;
+  repeated pogoprotos.map.SpawnPoint spawn_points = 4;
+  repeated string deleted_objects = 6;
+  bool is_truncated_list = 7;
+  repeated pogoprotos.map.fort.FortSummary fort_summaries = 8;
+  repeated pogoprotos.map.SpawnPoint decimated_spawn_points = 9;
+  // Pokemon within 2 steps or less.
+  repeated pogoprotos.map.pokemon.WildPokemon wild_pokemons = 5;
+  // Pokemon within 1 step or none.
+  repeated pogoprotos.map.pokemon.MapPokemon catchable_pokemons = 10;
+  // Pokemon farther away than 2 steps, but still in the area.
+  repeated pogoprotos.map.pokemon.NearbyPokemon nearby_pokemons = 11;
+}
+

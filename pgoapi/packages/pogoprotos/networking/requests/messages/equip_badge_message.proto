@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+import "pogoprotos/enums/badge_type.proto";
+
+message EquipBadgeMessage {
+  pogoprotos.enums.BadgeType badge_type = 1;
+}
+

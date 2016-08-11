@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pogoprotos.inventory;
+
+import "pogoprotos/inventory/item/item_id.proto";
+import "pogoprotos/inventory/egg_incubator_type.proto";
+
+message EggIncubator {
+  string id = 1;
+  pogoprotos.inventory.item.ItemId item_id = 2;
+  pogoprotos.inventory.EggIncubatorType incubator_type = 3;
+  int32 uses_remaining = 4;
+  uint64 pokemon_id = 5; // TODO: Check if is PokemonType
+  double start_km_walked = 6;
+  double target_km_walked = 7;
+}
+

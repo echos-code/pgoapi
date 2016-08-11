@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pogoprotos.inventory;
+
+import "pogoprotos/inventory/applied_item.proto";
+
+message AppliedItems {
+  repeated pogoprotos.inventory.AppliedItem item = 4;
+}
+

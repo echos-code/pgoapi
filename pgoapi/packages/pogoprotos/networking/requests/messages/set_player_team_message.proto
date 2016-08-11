@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+import "pogoprotos/enums/team_color.proto";
+
+message SetPlayerTeamMessage {
+  pogoprotos.enums.TeamColor team = 1;
+}
+

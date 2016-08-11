@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pogoprotos.networking.responses;
+
+import "pogoprotos/data/player_data.proto";
+
+message MarkTutorialCompleteResponse {
+  bool success = 1;
+  pogoprotos.data.PlayerData player_data = 2;
+}
+

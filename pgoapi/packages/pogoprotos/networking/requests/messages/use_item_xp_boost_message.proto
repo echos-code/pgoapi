@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+import "pogoprotos/inventory/item/item_id.proto";
+
+message UseItemXpBoostMessage {
+  pogoprotos.inventory.item.ItemId item_id = 1;
+}
+

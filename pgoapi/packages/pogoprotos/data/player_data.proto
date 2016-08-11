@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package pogoprotos.data;
+
+import "pogoprotos/enums/tutorial_state.proto";
+import "pogoprotos/data/player/player_avatar.proto";
+import "pogoprotos/data/player/daily_bonus.proto";
+import "pogoprotos/data/player/equipped_badge.proto";
+import "pogoprotos/data/player/contact_settings.proto";
+import "pogoprotos/data/player/currency.proto";
+import "pogoprotos/enums/team_color.proto";
+
+message PlayerData {
+  int64 creation_timestamp_ms = 1;
+  string username = 2;
+  pogoprotos.enums.TeamColor team = 5;
+  repeated pogoprotos.enums.TutorialState tutorial_state = 7 [packed=true];
+  pogoprotos.data.player.PlayerAvatar avatar = 8;
+  int32 max_pokemon_storage = 9;
+  int32 max_item_storage = 10;
+  pogoprotos.data.player.DailyBonus daily_bonus = 11;
+  pogoprotos.data.player.EquippedBadge equipped_badge = 12;
+  pogoprotos.data.player.ContactSettings contact_settings = 13;
+  repeated pogoprotos.data.player.Currency currencies = 14;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.data.gym;
+
+import "pogoprotos/data/pokemon_data.proto";
+import "pogoprotos/data/player/player_public_profile.proto";
+
+message GymMembership {
+  pogoprotos.data.PokemonData pokemon_data = 1;
+  pogoprotos.data.player.PlayerPublicProfile trainer_public_profile = 2;
+}
+

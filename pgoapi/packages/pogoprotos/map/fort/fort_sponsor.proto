@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pogoprotos.map.fort;
+
+enum FortSponsor {
+  UNSET_SPONSOR = 0;
+  MCDONALDS = 1;
+  POKEMON_STORE = 2;
+}
+

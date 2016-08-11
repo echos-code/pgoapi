@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests;
+
+import "pogoprotos/networking/requests/request_type.proto";
+
+message Request {
+  pogoprotos.networking.requests.RequestType request_type = 1;
+  bytes request_message = 2;
+}
+

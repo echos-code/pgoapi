@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package pogoprotos.data.logs;
+
+import "pogoprotos/enums/pokemon_id.proto";
+
+message CatchPokemonLogEntry {
+  pogoprotos.data.logs.CatchPokemonLogEntry.Result result = 1;
+  pogoprotos.enums.PokemonId pokemon_id = 2;
+  int32 combat_points = 3;
+  uint64 pokemon_data_id = 4;
+  enum Result {
+    UNSET = 0;
+    POKEMON_CAPTURED = 1;
+    POKEMON_FLED = 2;
+  }
+}
+

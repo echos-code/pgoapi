@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+import "pogoprotos/inventory/item/item_id.proto";
+
+message RecycleInventoryItemMessage {
+  pogoprotos.inventory.item.ItemId item_id = 1;
+  int32 count = 2;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.data.player;
+
+import "pogoprotos/data/player/player_avatar.proto";
+
+message PlayerPublicProfile {
+  string name = 1;
+  int32 level = 2;
+  pogoprotos.data.player.PlayerAvatar avatar = 3;
+}
+

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pogoprotos.networking.envelopes;
+
+import "pogoprotos/networking/envelopes/auth_ticket.proto";
+import "pogoprotos/networking/envelopes/unknown6_response.proto";
+
+message ResponseEnvelope {
+  int32 status_code = 1;
+  uint64 request_id = 2;
+  string api_url = 3;
+  repeated pogoprotos.networking.envelopes.Unknown6Response unknown6 = 6;
+  pogoprotos.networking.envelopes.AuthTicket auth_ticket = 7;
+  repeated bytes returns = 100;
+  string error = 101;
+}
+

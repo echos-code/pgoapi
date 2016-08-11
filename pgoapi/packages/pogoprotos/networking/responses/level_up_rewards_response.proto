@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package pogoprotos.networking.responses;
+
+import "pogoprotos/inventory/item/item_id.proto";
+import "pogoprotos/inventory/item/item_award.proto";
+
+message LevelUpRewardsResponse {
+  pogoprotos.networking.responses.LevelUpRewardsResponse.Result result = 1;
+  repeated pogoprotos.inventory.item.ItemAward items_awarded = 2;
+  repeated pogoprotos.inventory.item.ItemId items_unlocked = 4;
+  enum Result {
+    UNSET = 0;
+    SUCCESS = 1;
+    AWARDED_ALREADY = 2;
+  }
+}
+

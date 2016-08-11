@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pogoprotos.inventory;
+
+import "pogoprotos/inventory/inventory_upgrade.proto";
+
+message InventoryUpgrades {
+  repeated InventoryUpgrade inventory_upgrades = 1;
+}
+

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package pogoprotos.data;
+
+import "pogoprotos/enums/pokemon_id.proto";
+
+message PokedexEntry {
+  pogoprotos.enums.PokemonId pokemon_id = 1;
+  int32 times_encountered = 2;
+  int32 times_captured = 3;
+  int32 evolution_stone_pieces = 4;
+  int32 evolution_stones = 5;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.settings.master;
+
+import "pogoprotos/enums/badge_type.proto";
+
+message BadgeSettings {
+  pogoprotos.enums.BadgeType badge_type = 1;
+  int32 badge_rank = 2;
+  repeated int32 targets = 3;
+}
+

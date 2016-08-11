@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package pogoprotos.data.player;
+
+message PlayerCurrency {
+  int32 gems = 1;
+}
+

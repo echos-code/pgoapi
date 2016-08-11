@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package pogoprotos.settings.master.item;
+
+message ExperienceBoostAttributes {
+  float xp_multiplier = 1;
+  int32 boost_duration_ms = 2;
+}
+

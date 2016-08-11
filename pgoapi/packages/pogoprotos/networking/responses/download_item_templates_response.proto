@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package pogoprotos.networking.responses;
+
+import "pogoprotos/settings/master/item_settings.proto";
+import "pogoprotos/settings/master/move_settings.proto";
+import "pogoprotos/settings/master/badge_settings.proto";
+import "pogoprotos/settings/master/pokemon_settings.proto";
+import "pogoprotos/settings/master/move_sequence_settings.proto";
+import "pogoprotos/settings/master/type_effective_settings.proto";
+import "pogoprotos/settings/master/camera_settings.proto";
+import "pogoprotos/settings/master/player_level_settings.proto";
+import "pogoprotos/settings/master/gym_level_settings.proto";
+import "pogoprotos/settings/master/gym_battle_settings.proto";
+import "pogoprotos/settings/master/encounter_settings.proto";
+import "pogoprotos/settings/master/iap_item_display.proto";
+import "pogoprotos/settings/master/iap_settings.proto";
+import "pogoprotos/settings/master/pokemon_upgrade_settings.proto";
+import "pogoprotos/settings/master/equipped_badge_settings.proto";
+
+message DownloadItemTemplatesResponse {
+  bool success = 1;
+  repeated pogoprotos.networking.responses.DownloadItemTemplatesResponse.ItemTemplate item_templates = 2;
+  uint64 timestamp_ms = 3;
+  message ItemTemplate {
+    string template_id = 1;
+    pogoprotos.settings.master.PokemonSettings pokemon_settings = 2;
+    pogoprotos.settings.master.ItemSettings item_settings = 3;
+    pogoprotos.settings.master.MoveSettings move_settings = 4;
+    pogoprotos.settings.master.MoveSequenceSettings move_sequence_settings = 5;
+    pogoprotos.settings.master.TypeEffectiveSettings type_effective = 8;
+    pogoprotos.settings.master.BadgeSettings badge_settings = 10;
+    pogoprotos.settings.master.CameraSettings camera = 11;
+    pogoprotos.settings.master.PlayerLevelSettings player_level = 12;
+    pogoprotos.settings.master.GymLevelSettings gym_level = 13;
+    pogoprotos.settings.master.GymBattleSettings battle_settings = 14;
+    pogoprotos.settings.master.EncounterSettings encounter_settings = 15;
+    pogoprotos.settings.master.IapItemDisplay iap_item_display = 16;
+    pogoprotos.settings.master.IapSettings iap_settings = 17;
+    pogoprotos.settings.master.PokemonUpgradeSettings pokemon_upgrades = 18;
+    pogoprotos.settings.master.EquippedBadgeSettings equipped_badges = 19;
+  }
+}
+

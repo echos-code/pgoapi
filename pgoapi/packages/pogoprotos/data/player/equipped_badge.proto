@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.data.player;
+
+import "pogoprotos/enums/badge_type.proto";
+
+message EquippedBadge {
+  pogoprotos.enums.BadgeType badge_type = 1;
+  int32 level = 2;
+  int64 next_equip_change_allowed_timestamp_ms = 3;
+}
+

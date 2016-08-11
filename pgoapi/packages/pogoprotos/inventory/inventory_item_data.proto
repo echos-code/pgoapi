@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package pogoprotos.inventory;
+
+import "pogoprotos/inventory/item/item_data.proto";
+import "pogoprotos/inventory/applied_items.proto";
+import "pogoprotos/inventory/egg_incubators.proto";
+import "pogoprotos/inventory/candy.proto";
+import "pogoprotos/inventory/inventory_upgrades.proto";
+import "pogoprotos/data/pokemon_data.proto";
+import "pogoprotos/data/pokedex_entry.proto";
+import "pogoprotos/data/player/player_stats.proto";
+import "pogoprotos/data/player/player_currency.proto";
+import "pogoprotos/data/player/player_camera.proto";
+
+message InventoryItemData {
+  pogoprotos.data.PokemonData pokemon_data = 1;
+  pogoprotos.inventory.item.ItemData item = 2;
+  pogoprotos.data.PokedexEntry pokedex_entry = 3;
+  pogoprotos.data.player.PlayerStats player_stats = 4;
+  pogoprotos.data.player.PlayerCurrency player_currency = 5;
+  pogoprotos.data.player.PlayerCamera player_camera = 6;
+  pogoprotos.inventory.InventoryUpgrades inventory_upgrades = 7;
+  pogoprotos.inventory.AppliedItems applied_items = 8;
+  pogoprotos.inventory.EggIncubators egg_incubators = 9;
+  pogoprotos.inventory.Candy candy = 10;
+}
+

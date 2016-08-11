@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package pogoprotos.settings.master;
+
+import "pogoprotos/enums/item_category.proto";
+import "pogoprotos/inventory/item/item_id.proto";
+import "pogoprotos/inventory/item/item_type.proto";
+import "pogoprotos/settings/master/item/food_attributes.proto";
+import "pogoprotos/settings/master/item/potion_attributes.proto";
+import "pogoprotos/settings/master/item/revive_attributes.proto";
+import "pogoprotos/settings/master/item/battle_attributes.proto";
+import "pogoprotos/settings/master/item/incense_attributes.proto";
+import "pogoprotos/settings/master/item/pokeball_attributes.proto";
+import "pogoprotos/settings/master/item/fort_modifier_attributes.proto";
+import "pogoprotos/settings/master/item/egg_incubator_attributes.proto";
+import "pogoprotos/settings/master/item/experience_boost_attributes.proto";
+import "pogoprotos/settings/master/item/inventory_upgrade_attributes.proto";
+
+message ItemSettings {
+  pogoprotos.inventory.item.ItemId item_id = 1;
+  pogoprotos.inventory.item.ItemType item_type = 2;
+  pogoprotos.enums.ItemCategory category = 3;
+  float drop_freq = 4;
+  int32 drop_trainer_level = 5;
+  // One of the below attributes will be set in the response, the others will be null.
+  pogoprotos.settings.master.item.PokeballAttributes pokeball = 6;
+  pogoprotos.settings.master.item.PotionAttributes potion = 7;
+  pogoprotos.settings.master.item.ReviveAttributes revive = 8;
+  pogoprotos.settings.master.item.BattleAttributes battle = 9;
+  pogoprotos.settings.master.item.FoodAttributes food = 10;
+  pogoprotos.settings.master.item.InventoryUpgradeAttributes inventory_upgrade = 11;
+  pogoprotos.settings.master.item.ExperienceBoostAttributes xp_boost = 12;
+  pogoprotos.settings.master.item.IncenseAttributes incense = 13;
+  pogoprotos.settings.master.item.EggIncubatorAttributes egg_incubator = 14;
+  pogoprotos.settings.master.item.FortModifierAttributes fort_modifier = 15;
+}
+

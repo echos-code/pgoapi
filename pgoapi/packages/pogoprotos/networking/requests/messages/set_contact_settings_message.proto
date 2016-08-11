@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+import "pogoprotos/data/player/contact_settings.proto";
+
+message SetContactSettingsMessage {
+  pogoprotos.data.player.ContactSettings contact_settings = 1;
+}
+

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package pogoprotos.networking.envelopes;
+
+import "pogoprotos/networking/requests/request.proto";
+import "pogoprotos/networking/envelopes/auth_ticket.proto";
+import "pogoprotos/networking/envelopes/unknown6.proto";
+
+message RequestEnvelope {
+  int32 status_code = 1;
+  uint64 request_id = 3;
+  repeated pogoprotos.networking.requests.Request requests = 4;
+  // Unknown6 is required to get a response.
+  // For an example check https://github.com/keyphact/pgoapi/blob/75eba6b5b630841ee4f7c2ea983f15874fb0862d/pgoapi/rpc_api.py#L192-L212
+  pogoprotos.networking.envelopes.Unknown6 unknown6 = 6;
+  double latitude = 7;
+  double longitude = 8;
+  double altitude = 9;
+  AuthInfo auth_info = 10;
+  pogoprotos.networking.envelopes.AuthTicket auth_ticket = 11;
+  int64 unknown12 = 12;
+  message AuthInfo {
+    string provider = 1;
+    JWT token = 2;
+    message JWT {
+      string contents = 1;
+      int32 unknown2 = 2;
+    }
+  }
+}
+

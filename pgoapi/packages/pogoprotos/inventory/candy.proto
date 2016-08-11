@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pogoprotos.inventory;
+
+import "pogoprotos/enums/pokemon_family_id.proto";
+
+message Candy {
+  pogoprotos.enums.PokemonFamilyId family_id = 1;
+  int32 candy = 2;
+}
+

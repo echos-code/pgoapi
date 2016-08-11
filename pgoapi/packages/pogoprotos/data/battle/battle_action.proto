@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package pogoprotos.data.battle;
+
+import "pogoprotos/data/battle/battle_results.proto";
+import "pogoprotos/data/battle/battle_action_type.proto";
+import "pogoprotos/data/battle/battle_participant.proto";
+
+message BattleAction {
+  pogoprotos.data.battle.BattleActionType Type = 1;
+  int64 action_start_ms = 2;
+  int32 duration_ms = 3;
+  int32 energy_delta = 5;
+  int32 attacker_index = 6;
+  int32 target_index = 7;
+  fixed64 active_pokemon_id = 8;
+  pogoprotos.data.battle.BattleParticipant player_joined = 9;
+  pogoprotos.data.battle.BattleResults battle_results = 10;
+  int64 damage_windows_start_timestamp_mss = 11;
+  int64 damage_windows_end_timestamp_mss = 12;
+  pogoprotos.data.battle.BattleParticipant player_left = 13;
+  fixed64 target_pokemon_id = 14;
+}
+

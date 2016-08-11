@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pogoprotos.data.logs;
+
+import "pogoprotos/data/logs/catch_pokemon_log_entry.proto";
+import "pogoprotos/data/logs/fort_search_log_entry.proto";
+
+message ActionLogEntry {
+  int64 timestamp_ms = 1;
+  bool sfida = 2;
+  oneof Action {
+    pogoprotos.data.logs.CatchPokemonLogEntry catch_pokemon = 3;
+    pogoprotos.data.logs.FortSearchLogEntry fort_search = 4;
+  }
+}
+

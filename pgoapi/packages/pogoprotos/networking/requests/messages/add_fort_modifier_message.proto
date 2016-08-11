@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+import "pogoprotos/inventory/item/item_id.proto";
+
+message AddFortModifierMessage {
+  pogoprotos.inventory.item.ItemId modifier_type = 1;
+  string fort_id = 2;
+  double player_latitude = 3;
+  double player_longitude = 4;
+}
+

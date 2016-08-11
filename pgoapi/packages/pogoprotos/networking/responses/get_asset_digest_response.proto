@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pogoprotos.networking.responses;
+
+import "pogoprotos/data/asset_digest_entry.proto";
+
+message GetAssetDigestResponse {
+  repeated pogoprotos.data.AssetDigestEntry digest = 1;
+  uint64 timestamp_ms = 2;
+}
+

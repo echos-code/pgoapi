@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.data.gym;
+
+import "pogoprotos/map/fort/fort_data.proto";
+import "pogoprotos/data/gym/gym_membership.proto";
+
+message GymState {
+  pogoprotos.map.fort.FortData fort_data = 1;
+  repeated pogoprotos.data.gym.GymMembership memberships = 2;
+}
+

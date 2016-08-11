@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.networking.responses;
+
+import "pogoprotos/map/map_cell.proto";
+import "pogoprotos/map/map_objects_status.proto";
+
+message GetMapObjectsResponse {
+  repeated pogoprotos.map.MapCell map_cells = 1;
+  pogoprotos.map.MapObjectsStatus status = 2;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package pogoprotos.map.fort;
+
+enum FortType {
+  GYM = 0;
+  CHECKPOINT = 1;
+}
+

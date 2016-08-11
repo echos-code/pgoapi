@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pogoprotos.data.battle;
+
+import "pogoprotos/data/pokemon_data.proto";
+
+message BattlePokemonInfo {
+  pogoprotos.data.PokemonData pokemon_data = 1;
+  int32 current_health = 2;
+  int32 current_energy = 3;
+}
+

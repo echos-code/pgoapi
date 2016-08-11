@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+message IncenseEncounterMessage {
+  uint64 encounter_id = 1;
+  string encounter_location = 2;
+}
+

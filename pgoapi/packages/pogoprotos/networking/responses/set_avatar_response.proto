@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pogoprotos.networking.responses;
+
+import "pogoprotos/data/player_data.proto";
+
+message SetAvatarResponse {
+  pogoprotos.networking.responses.SetAvatarResponse.Status status = 1;
+  pogoprotos.data.PlayerData player_data = 2;
+  enum Status {
+    UNSET = 0;
+    SUCCESS = 1;
+    AVATAR_ALREADY_SET = 2;
+    FAILURE = 3;
+  }
+}
+

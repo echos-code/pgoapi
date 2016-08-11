@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package pogoprotos.settings.master;
+
+message MoveSequenceSettings {
+  repeated string sequence = 1;
+}
+

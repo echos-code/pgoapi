@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package pogoprotos.map;
+
+message SpawnPoint {
+  double latitude = 2;
+  double longitude = 3;
+}
+

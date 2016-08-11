@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package pogoprotos.inventory;
+
+import "pogoprotos/inventory/egg_incubator.proto";
+
+message EggIncubators {
+  repeated pogoprotos.inventory.EggIncubator egg_incubator = 1;
+}
+

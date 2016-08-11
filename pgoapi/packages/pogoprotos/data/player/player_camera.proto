@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package pogoprotos.data.player;
+
+message PlayerCamera {
+  bool is_default_camera = 1;
+}
+

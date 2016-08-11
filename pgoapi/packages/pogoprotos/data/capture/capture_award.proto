@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package pogoprotos.data.capture;
+
+import "pogoprotos/enums/activity_type.proto";
+
+message CaptureAward {
+  repeated pogoprotos.enums.ActivityType activity_type = 1 [packed=true];
+  repeated int32 xp = 2 [packed=true];
+  repeated int32 candy = 3 [packed=true];
+  repeated int32 stardust = 4 [packed=true];
+}
+

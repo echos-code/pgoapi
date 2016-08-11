@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pogoprotos.networking.requests.messages;
+
+import "pogoprotos/inventory/item/item_id.proto";
+
+message UseItemPotionMessage {
+  pogoprotos.inventory.item.ItemId item_id = 1;
+  fixed64 pokemon_id = 2;
+}
+

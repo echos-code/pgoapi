@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pogoprotos.data.battle;
+
+import "pogoprotos/data/battle/battle_state.proto";
+import "pogoprotos/data/battle/battle_type.proto";
+import "pogoprotos/data/battle/battle_action.proto";
+
+message BattleLog {
+  pogoprotos.data.battle.BattleState state = 1;
+  pogoprotos.data.battle.BattleType battle_type = 2;
+  int64 server_ms = 3;
+  repeated pogoprotos.data.battle.BattleAction battle_actions = 4;
+  int64 battle_start_timestamp_ms = 5;
+  int64 battle_end_timestamp_ms = 6;
+}
+

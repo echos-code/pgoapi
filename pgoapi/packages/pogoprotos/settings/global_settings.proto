@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pogoprotos.settings;
+
+import "pogoprotos/settings/fort_settings.proto";
+import "pogoprotos/settings/map_settings.proto";
+import "pogoprotos/settings/level_settings.proto";
+import "pogoprotos/settings/inventory_settings.proto";
+
+message GlobalSettings {
+  pogoprotos.settings.FortSettings fort_settings = 2;
+  pogoprotos.settings.MapSettings map_settings = 3;
+  pogoprotos.settings.LevelSettings level_settings = 4;
+  pogoprotos.settings.InventorySettings inventory_settings = 5;
+  string minimum_client_version = 6;
+}
+
